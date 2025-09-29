@@ -24,8 +24,8 @@ public class Main {
                 InputStream is = Main.class.getResourceAsStream("/travel.csv");
                 CSVReader reader = new CSVReader(new InputStreamReader(is));
         ) {
-            String insertSql = "INSERT INTO attractions(no,district,title,description,address,phone) " +
-                    "VALUES (?, ?, ?, ?, ?, ?)";
+            String insertSql = "INSERT INTO travels(no, district, title, description, address, phone, created_at, updated_at) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
             PreparedStatement pstmt = conn.prepareStatement(insertSql);
 
             String[] row;
