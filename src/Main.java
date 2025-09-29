@@ -13,7 +13,7 @@ public class Main {
 
     }
 
-
+//
     private static void insertAttractions() {
 
         String url = "jdbc:mysql://localhost:3306/travel_db?serverTimezone=UTC";
